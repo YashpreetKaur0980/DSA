@@ -238,7 +238,7 @@
 //    }
 //}
 
-//Q6. Insert a new node in the first available position
+//Insert a new node in the first available position :
 //class Node
 //{
 //    int data;
@@ -296,6 +296,43 @@
 //        preorder(root);
 //    }
 //}
+
+//ABSTRACT CLASS (format):
+// Abstract class
+//abstract class Animal {
+//    abstract void makeSound();
+//    void eat() {
+//        System.out.println("This animal eats food.");
+//    }
+//}
+//class Dog extends Animal {
+//    void makeSound() {
+//        System.out.println("Bark");
+//    }
+//}
+//public class Main {
+//    public static void main(String[] args) {
+//        Dog d = new Dog();
+//        d.makeSound();
+//        d.eat();
+//    }
+//}
+
+//INTERFACE FORMAT :
+interface Animal {
+    void makeSound(); // abstract method
+}
+class Dog implements Animal {
+    public void makeSound() {
+        System.out.println("Bark");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.makeSound();  // Output: Bark
+    }
+}
 
 /ABSTRACT CLASS (format):
 // Abstract class
