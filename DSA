@@ -1,0 +1,298 @@
+//INORDER TRAVERSAL :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data = value;
+//        left=right=null;
+//    }
+//}
+//class g27TreeTraversal{
+//    public static void inorder(TreeNode root){
+//        if(root==null) return;
+//        inorder(root.left);
+//        System.out.println(root.data+" ");
+//        inorder(root.right);
+//    }
+//    public static void main(String[] args){
+//        TreeNode root=new TreeNode(1);
+//        root.left=new TreeNode(2);
+//        root.right=new TreeNode(3);
+//        root.left.left=new TreeNode(4);
+//        root.left.right=new TreeNode(5);
+//        System.out.println("Inorder traversal: ");
+//        inorder(root);
+//
+//    }
+//}
+
+//POSTORDER :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data = value;
+//        left=right=null;
+//    }
+//}
+//class g27TreeTraversal{
+//    public static void postorder(TreeNode root){
+//        if(root==null) return;
+//        postorder(root.left);
+//        postorder(root.right);
+//        System.out.println(root.data+" ");
+//    }
+//    public static void main(String[] args){
+//        TreeNode root=new TreeNode(1);
+//        root.left=new TreeNode(2);
+//        root.right=new TreeNode(3);
+//        root.left.left=new TreeNode(4);
+//        root.left.right=new TreeNode(5);
+//        System.out.println("Postorder traversal: ");
+//        postorder(root);
+//
+//    }
+//}
+
+//HEIGHT OF BINARY TREE :
+//class TreeNode {
+//       int data;
+//       TreeNode left, right;
+//
+//       TreeNode(int value) {
+//           data = value;
+//           left = right = null;
+//       }
+//   }
+//class HeightTree{
+//    public static int height(TreeNode root){
+//        if(root==null) return 0;
+//        int leftHeight = height(root.left);
+//        int rightHeight = height(root.right);
+//        return Math.max(leftHeight, rightHeight)+1;
+//    }
+//    public static void main(String[] args){
+//        TreeNode root = new TreeNode(1);
+//        root.left = new TreeNode(2);
+//        root.right = new TreeNode(3);
+//        root.left.left = new TreeNode(4);
+//        root.left.right = new TreeNode(5);
+//        System.out.println("Height is : "+ height(root));
+//
+//    }
+//}
+
+//COUNT NODES :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data=value;
+//        left=right=null;
+//    }
+//}
+//class CountNode{
+//    public static int count(TreeNode root){
+//        if(root==null) return 0;
+//        return 1+count(root.left)+count(root.right);
+//    }
+//    public static void main(String[] args){
+//        TreeNode root = new TreeNode(1);
+//        root.left=new TreeNode(2);
+//        root.right=new TreeNode(3);
+//        root.left.left=new TreeNode(4);
+//        root.left.right=new TreeNode(5);
+//        System.out.println("Number of nodes are: "+count(root));
+//
+//    }
+//}
+
+//SEARCH NODE :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data = value;
+//        left=right=null;
+//    }
+//}
+//class SearchNode{
+//    public static boolean search(TreeNode root, int k){
+//        if(root==null) return false;
+//        if(root.data==k) return true;
+//        return search(root.left, k)||search(root.right, k);
+//    }
+//    public static void main(String[] args){
+//        TreeNode root = new TreeNode(1);
+//        root.left=new TreeNode(2);
+//        root.right=new TreeNode(3);
+//        root.left.left=new TreeNode(4);
+//        root.left.right=new TreeNode(5);
+//        System.out.println("is 3 present ? "+search(root, 3));
+//        System.out.println("is 6 present ? "+search(root, 6));
+//    }
+//}
+
+//LEVELS IN A BINARY TREE :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data=value;
+//        left=right=null;
+//    }
+//}
+//class Levels{
+//    public static void printLevel(TreeNode root, int k){
+//        if(root==null) return;
+//        if(k==1){
+//            System.out.println(root.data+" ");
+//        }else{
+//            printLevel(root.left, k-1);
+//            printLevel(root.right, k-1);
+//        }
+//    }
+//    public static void main(String[] args){
+//        TreeNode root = new TreeNode(10);
+//        root.left=new TreeNode(20);
+//        root.right=new TreeNode(30);
+//        root.left.left=new TreeNode(40);
+//        root.left.right=new TreeNode(50);
+//        System.out.println("Nodes at level 3 : ");
+//        printLevel(root, 3);
+//    }
+//}
+
+//MAX NODE IN A LEVEL :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data=value;
+//        left=right=null;
+//    }
+//}
+//class MaxNode{
+//    public static int findMax(TreeNode root){
+//        if(root==null)return Integer.MIN_VALUE;
+//        int leftMax=findMax(root.left);
+//        int rightMax=findMax(root.right);
+//        return Math.max(root.data, Math.max(leftMax, rightMax));
+//    }
+//    public static void main(String[] args){
+//        TreeNode root=new TreeNode(10);
+//        root.left=new TreeNode(10);
+//        root.right=new TreeNode(20);
+//        root.left.left=new TreeNode(30);
+//        root.left.right=new TreeNode(40);
+//        System.out.println("Max value: "+findMax(root));
+//    }
+//}
+
+//FIND LEAF NODES :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data=value;
+//        left=right=null;
+//    }
+//}
+//class LeafNodes{
+//    public static int countLeaves(TreeNode root){
+//        if(root==null) return 0;
+//        if(root.left==null && root.right==null) return 1;
+//        return countLeaves(root.left)+countLeaves(root.right);
+//    }
+//    public static void main(String[] args){
+//        TreeNode root = new TreeNode(10);
+//        root.left=new TreeNode(10);
+//        root.right=new TreeNode(20);
+//        root.left.left=new TreeNode(30);
+//        root.left.right=new TreeNode(40);
+//        System.out.println("Number of leaf nodes : "+countLeaves(root));
+//    }
+//}
+
+//SUM OF NODES :
+//class TreeNode{
+//    int data;
+//    TreeNode left, right;
+//    TreeNode(int value){
+//        data=value;
+//        left=right=null;
+//    }
+//}
+//class LeafNodes{
+//    public static int sum(TreeNode root){
+//        if(root==null) return 0;
+//       return root.data+sum(root.left)+sum(root.right);
+//    }
+//    public static void main(String[] args){
+//        TreeNode root = new TreeNode(10);
+//        root.left=new TreeNode(10);
+//        root.right=new TreeNode(20);
+//        root.left.left=new TreeNode(30);
+//        root.left.right=new TreeNode(40);
+//        System.out.println("Sum is : "+sum(root));
+//    }
+//}
+
+//Q6. Insert a new node in the first available position
+//class Node
+//{
+//    int data;
+//    Node left,right;
+//    Node(int data)
+//    {
+//        this.data=data;
+//        left=right=null;
+//    }
+//}
+//class Tree2
+//{
+//    public static Node insert(Node root, int value) {
+//        Node newNode = new Node(value);
+//
+//        if (root == null) {
+//            return newNode;
+//        }
+//
+//        if (root.left == null) {
+//            root.left = newNode;
+//            return root;
+//        }
+//
+//        if (root.right == null) {
+//            root.right = newNode;
+//            return root;
+//        }
+//
+//        Node inserted = insert(root.left, value);
+//        if (inserted != null) {
+//            return root;
+//        }
+//
+//        insert(root.right, value);
+//        return root;
+//    }
+//
+//    public static void preorder(Node root)
+//    {
+//        if(root==null)
+//            return;
+//        System.out.print(root.data+" ");
+//        preorder(root.left);
+//        preorder(root.right);
+//    }
+//    public static void main(String args[])
+//    {
+//        Node root=new Node(10);
+//        root.left=new Node(20);
+//        root.right=new Node(30);
+//        preorder(root);
+//        System.out.println();
+//        insert(root,40);
+//        preorder(root);
+//    }
+//}
